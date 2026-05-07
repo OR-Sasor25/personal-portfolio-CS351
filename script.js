@@ -83,7 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
     resumeBtn.addEventListener('click', () => {
         const href = resumeBtn.dataset.href;
         if (href) {
-            window.location.href = href;
+            const anchor = document.createElement('a');
+            anchor.href = href;
+            anchor.download = 'omar_rosas_resume.pdf';
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
         }
     });
 
