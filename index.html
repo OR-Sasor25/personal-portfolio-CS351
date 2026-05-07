@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1>Omar Rosas</h1>
+        <button data-section="bio">Bio</button>
+        <button data-section="projects">Projects</button>
+        <button data-section="resume">Resume</button>
+        <button data-section="contact">Contact</button>
+    </nav>
+    <main>
+        <section id="bio">
+            <h2>Bio</h2>
+            <p>Worker profile and contact info.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">Project 1</div>
+            <div class="project">Project 2</div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <button class="intaract" id="resumebtn" data-href="resume.pdf">Download Resume PDF</button>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <input type="email" id="email-input" placeholder="Enter email">
+                <button class="intaract" id="submit-email">Submit</button>
+                <div id="email-display"></div>
+            </div>
+        </section>
+    </main>
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+            <button class = "intaract" id="close-lightbox">×</button>
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-description"></p>
+            <div class="slideshow">
+                <button class="intaract" id ="prev">Prev</button>
+                <img id="slide-image" src="" alt="">
+                <button class="intaract" id="next">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
